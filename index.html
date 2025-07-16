@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva Odontología UNLP - FINAL CORREGIDA (Patología IV y V)</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #fff0f5; padding: 20px; }
+    h1 { text-align: center; color: #ad1457; }
+    .grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .cuatrimestre {
+      background-color: #fce4ec; padding: 15px; border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 260px;
+    }
+    .cuatrimestre h2 {
+      font-size: 16px; text-align: center; color: #880e4f; margin-bottom: 10px;
+    }
+    .materia {
+      margin: 8px 0; padding: 10px; border-radius: 8px;
+      background-color: #eeeeee; text-align: center;
+      font-weight: 500; font-size: 14px; cursor: pointer;
+    }
+    .rosado { background-color: #f8bbd0 !important; }
+    .morado { background-color: #ce93d8 !important; }
+    .verde  { background-color: #a5d6a7 !important; }
+    .gris   { background-color: #eeeeee !important; }
+  </style>
+</head>
+<body>
+<h1>Malla Interactiva Odontología - UNLP (1° a 5° Año por Cuatrimestres)</h1>
+<div class="grid">
+<div class="cuatrimestre">
+<h2>1° Cuatrimestre – 1° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Preventiva y Social I</div>
+<div class="materia gris" onclick="toggle(this)">Introducción a la Odontología</div>
+<div class="materia gris" onclick="toggle(this)">Anatomía I</div>
+<div class="materia gris" onclick="toggle(this)">Bioquímica Estomatológica I</div>
+<div class="materia gris" onclick="toggle(this)">Biofísica I</div>
+<div class="materia gris" onclick="toggle(this)">Biología General I</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>2° Cuatrimestre – 1° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Histología y Embriología I</div>
+<div class="materia gris" onclick="toggle(this)">Biofísica II</div>
+<div class="materia gris" onclick="toggle(this)">Biología General II</div>
+<div class="materia gris" onclick="toggle(this)">Anatomía II</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>3° Cuatrimestre – 2° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Preventiva y Social II</div>
+<div class="materia gris" onclick="toggle(this)">Fisiología I</div>
+<div class="materia gris" onclick="toggle(this)">Histología y Embriología II</div>
+<div class="materia gris" onclick="toggle(this)">Microbiología y Parasitología I</div>
+<div class="materia gris" onclick="toggle(this)">Biomateriales I</div>
+<div class="materia gris" onclick="toggle(this)">Dimensión Psicológica de la Atención Odontológica</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>4° Cuatrimestre – 2° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Bioquímica Estomatológica II</div>
+<div class="materia gris" onclick="toggle(this)">Fisiología II</div>
+<div class="materia gris" onclick="toggle(this)">Patología y Clínica Estomatológica I</div>
+<div class="materia gris" onclick="toggle(this)">Microbiología y Parasitología II</div>
+<div class="materia gris" onclick="toggle(this)">Biomateriales II</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>5° Cuatrimestre – 3° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Preventiva y Social III</div>
+<div class="materia gris" onclick="toggle(this)">Cirugía I</div>
+<div class="materia gris" onclick="toggle(this)">Farmacología y Terapéutica I</div>
+<div class="materia gris" onclick="toggle(this)">Patología y Clínica Estomatológica II</div>
+<div class="materia gris" onclick="toggle(this)">Diagnóstico por Imágenes I</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental I</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis I</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>6° Cuatrimestre – 3° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Cirugía II</div>
+<div class="materia gris" onclick="toggle(this)">Farmacología y Terapéutica II</div>
+<div class="materia gris" onclick="toggle(this)">Patología y Clínica Estomatológica III</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental II</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis II</div>
+<div class="materia gris" onclick="toggle(this)">Diagnóstico por Imágenes II</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>7° Cuatrimestre – 4° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Preventiva y Social IV</div>
+<div class="materia gris" onclick="toggle(this)">Endodoncia I</div>
+<div class="materia gris" onclick="toggle(this)">Periodoncia I</div>
+<div class="materia gris" onclick="toggle(this)">Cirugía III</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental III</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis III</div>
+<div class="materia gris" onclick="toggle(this)">Patología y Clínica Estomatológica IV</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>8° Cuatrimestre – 4° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Endodoncia II</div>
+<div class="materia gris" onclick="toggle(this)">Periodoncia II</div>
+<div class="materia gris" onclick="toggle(this)">Cirugía IV</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental IV</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis IV</div>
+<div class="materia gris" onclick="toggle(this)">Patología y Clínica Estomatológica V</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>9° Cuatrimestre – 5° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Preventiva y Social V</div>
+<div class="materia gris" onclick="toggle(this)">Odontología Integral Niños I</div>
+<div class="materia gris" onclick="toggle(this)">Odontología Integral Niños II</div>
+<div class="materia gris" onclick="toggle(this)">Cirugía V</div>
+<div class="materia gris" onclick="toggle(this)">Odontología Legal y Forense</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental V</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis V</div>
+</div>
+
+<div class="cuatrimestre">
+<h2>10° Cuatrimestre – 5° Año</h2>
+<div class="materia gris" onclick="toggle(this)">Odontología Integral Niños III</div>
+<div class="materia gris" onclick="toggle(this)">Cirugía VI</div>
+<div class="materia gris" onclick="toggle(this)">Bioética</div>
+<div class="materia gris" onclick="toggle(this)">Operatoria Dental VI</div>
+<div class="materia gris" onclick="toggle(this)">Prótesis VI</div>
+<div class="materia gris" onclick="toggle(this)">Prácticas Profesionales Supervisadas (P.P.S.)</div>
+</div>
+
+
+</div>
+
+<script>
+  function toggle(el) {
+    const estados = ['gris', 'rosado', 'verde', 'morado'];
+    const actual = estados.find(e => el.classList.contains(e));
+    const siguiente = estados[(estados.indexOf(actual) + 1) % estados.length];
+    el.classList.remove(actual);
+    el.classList.add(siguiente);
+    localStorage.setItem(el.innerText.trim(), siguiente);
+  }
+
+  window.onload = () => {
+    document.querySelectorAll('.materia').forEach(el => {
+      const estado = localStorage.getItem(el.innerText.trim());
+      if (estado) {
+        el.classList.remove('gris');
+        el.classList.add(estado);
+      }
+    });
+  };
+</script>
+</body>
+</html>
