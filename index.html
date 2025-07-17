@@ -15,7 +15,17 @@
     .cuatrimestre h2 {
       font-size: 16px; text-align: center; color: #880e4f; margin-bottom: 10px;
     }
-    .materia {
+    .materia { 
+  .bloqueada {
+  background-color: #ce93d8 !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.desbloqueada {
+  opacity: 1;
+}
+
       margin: 8px 0; padding: 10px; border-radius: 8px;
       background-color: #eeeeee; text-align: center;
       font-weight: 500; font-size: 14px; cursor: pointer;
@@ -133,6 +143,52 @@
 </div>
 
 <script>
+    // 1. Definir correlativas
+  const prerequisites = {
+    "Patología y Clínica Estomatológica II": ["Farmacología y Terapéutica 1"],
+    "Cirugía II": ["Cirugia I"],
+    "Farmacología y Terapéutica II": ["Farmacología y Terapéutica 1"],
+    "Operatoria Dental II": ["Operatoria Dental 1"],
+    "Prótesis II": ["Protesis I"],
+    "Diagnóstico por Imágenes II": ["Diagnóstico por Imágenes I"],
+    "Patología y Clínica Estomatológica III": ["Patología y Clínica Estomatológica II"]
+    // Agregá más correlativas según el plan de estudio real
+  };
+
+  // 2. Asignar data-name a cada materia
+  document.querySelectorAll('.materia').forEach(el => {
+    el.setAttribute('data-name', el.textContent.trim());
+  });
+
+  // 3. Función para actualizar bloqueos
+  function updatePrerequisites() {
+    for (const [subject, deps] of Object.entries(prerequisites)) {
+      const allPassed = deps.every(dep => {
+        const el = document.querySelector(`.materia[data-name="${dep}"]`);
+        return el && el.classList.contains('cursada');
+      });
+
+      const subjectEl = document.querySelector(`.materia[data-name="${subject}"]`);
+      if (subjectEl) {
+        if (allPassed) {
+          subjectEl.classList.remove('bloqueada');
+        } else {
+          subjectEl.classList.add('bloqueada');
+        }
+      }
+    }
+  }
+
+  // 4. Re-evaluar correlativas cada vez que una materia es clickeada
+  document.querySelectorAll('.materia').forEach(el => {
+    el.addEventListener('click', () => {
+      setTimeout(updatePrerequisites, 100); // esperamos a que se actualice visualmente
+    });
+  });
+
+  // 5. Ejecutar la evaluación inicial al cargar
+  updatePrerequisites();
+
   function toggle(el) {
     const estados = ['gris', 'rosado', 'verde', 'morado'];
     const actual = estados.find(e => el.classList.contains(e));
@@ -141,7 +197,6 @@
     el.classList.add(siguiente);
     localStorage.setItem(el.innerText.trim(), siguiente);
   }
-
   window.onload = () => {
     document.querySelectorAll('.materia').forEach(el => {
       const estado = localStorage.getItem(el.innerText.trim());
