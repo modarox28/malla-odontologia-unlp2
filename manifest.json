@@ -1,5 +1,5 @@
 {
-  "name": "Malla Odontolog\u00eda",
+  "name": "Malla Odontología",
   "short_name": "Odonto UNLP",
   "start_url": "./index.html",
   "display": "standalone",
@@ -7,7 +7,7 @@
   "theme_color": "#f8bbd0",
   "icons": [
     {
-      "src": "icon_diente_rosado.png",
+      "src": "icon_diente.png",
       "sizes": "512x512",
       "type": "image/png"
     }
